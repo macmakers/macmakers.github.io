@@ -1,0 +1,81 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status</title>
+</head>
+<body>
+<input type="text" id="name"> <h2> Name </h2>
+<input type="text" id="email"> <h2> Email </h2>
+<input type="text" id="idea"> <h2> What's your idea? </h2>
+<button type="button" id="btnSubmit"> Submit</button>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBLsyQJZx8dhXI6QCdAjX_zBPrO96S-5ZQ",
+    authDomain: "macmakers-website.firebaseapp.com",
+    databaseURL: "https://macmakers-website.firebaseio.com",
+    projectId: "macmakers-website",
+    storageBucket: "macmakers-website.appspot.com",
+    messagingSenderId: "751022001948"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript">
+var db = firebase.database();
+
+  function setStatus(name){
+    db.ref().set({
+      State:name
+    });
+  }
+  function setStatus(email){
+    db.ref().set({
+      State:email
+    })
+  }
+  function setStatus(idea){
+    db.ref().set({
+      State:idea
+    })
+  }
+  function getStatus(){
+    db.ref().on('value',function(snap){
+      snap.forEach(function(value){
+       });
+    });
+  }
+  function getStatus(){
+    db.ref().on('value',function(snap){
+      snap.forEach(function(value){
+       });
+    });
+  }
+  function getStatus(){
+    db.ref().on('value',function(snap){
+      snap.forEach(function(value){
+       });
+    });
+  }
+  document.getElementById('btnSubmit').addEventListener('click',function(){
+    var name=document.getElementById('name').value;
+    var email=document.getElementById('email').value;
+    var idea=document.getElementById('idea').value;
+    setStatus(name);
+    getStatus();
+    setStatus(email);
+    getStatus();
+    setStatus(idea);
+    getStatus();
+    //setStatus(idea);
+  });
+
+</script>
+</body>
+</html>
