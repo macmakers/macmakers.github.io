@@ -1,26 +1,312 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>McMaster Makers - The Maker Revolution is here.</title>
+        <title>
+            McMaster Makers - The Maker Revolution is here.
+        </title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
         <link rel="stylesheet" href="css/macmakers.css" type="text/css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     </head>
     
     <body>
-        <h1>
-            Make your dreams into reality.
-        </h1>
-        
-        <div id="navbar">
-            <a href="#home">Home</a> <!-- TODO: REPLACE WITH LOGO -->
-            <a href="#about">About Us</a>
-            <a href="#events">Events</a>
-            <a href="#projects">Projects</a>
-            <a href="#gallery">Gallery</a>
-            <a href="contact">Talk To Us</a>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-left">
+                    <a class="navbar-brand" href="#home">
+                        <img src="img/logo-navbar.png" alt="Home" width=45px height=50px>
+                        McMaster Makers
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav navbar-nav ml-auto navbar-left">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">
+                                Who We Are
+                            </a>
+                        </li>
+                        <li role="nav-item">
+                            <a class="nav-link" href="#events">
+                                Events
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">
+                                Gallery
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Talk To Us
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-user"></span>
+                                Sign Up
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">First Slide</h2>
+                        <p class="lead">This is a description for the first slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Second Slide</h2>
+                        <p class="lead">This is a description for the second slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Third Slide</h2>
+                        <p class="lead">This is a description for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+        </header>
+
+        <div id="home">
+            <img src="img/Makers-Logo-Colour.png" alt="McMaster Makers">
+            <h1 class="title">
+                Turn Your Vision Into Reality
+            </h1>
         </div>
 
-        <script type"text/javascript" src="js/macmakers.js"></script>
 
+        <div id="about">
+            <h2 class="title">
+                Who We Are
+            </h2>
+            <p class="content">
+            McMaster Makers works to create a collaborative, interdisciplinary, and inclusive Makers community through student designed and led hands-on projects. The aim of McMaster Makers is to have the members of this community be capable of finding self-actualization by developing the skills required to turn their vision into reality.
+            </p>
+
+            <p class="content">
+            Students learn to utilize cutting-edge industry standard tools and techniques available at the campus Makerspace in the H.G. Thode Library to develop technical prototypes and personal projects. This includes: laser-cutting/etching, 3D printing, circuitry, design, manufacturing, and more.
+            </p>
+
+            <div id="misandvis">
+                <h3 class="title">
+                    Mission and Vision
+                </h3>
+                <p class="content">
+                TEXT
+                </p>
+            </div>
+            <div id="learning">
+                <h3 class="title">
+                    Approach to Learning
+                </h3>
+                <p class="content">
+                    <ul>
+                        <li>
+                            The human experience is a narrative which we are responsible for writing ourselves
+                        </li>
+                        <li>
+                            Excites.
+                            The greatest challenges to education are disinterest and apathy.
+                        </li>
+                        <li>
+                            Cultivates curiosity.
+                            Questions that cultivate natural curiosity are better than the threat of a test.
+                        </li>
+                        <li>
+                            Is active.
+                            Effective learning is active, not passive. Watching a video is not enough.
+                        </li>
+                        <li>
+                            Is applicable.
+                            Use it or lose it: it is essential to apply what you're learning as you learn it.
+                        </li>
+                        <li>
+                            Is community driven.
+                            A community that challenges and inspires you is invaluable.
+                        </li>
+                        <li>
+                            Doesn't discriminate.
+                            Your age, country, and gender don't determine what you are capable of learning.
+                        </li>
+                        <li>
+                            Allows for failure.
+                            The best learners allow themselves to make many mistakes along their journey.
+                        </li>
+                        <li>
+                            Sparks questions.
+                            The culmination of a great education isn't knowing all the answers — it's knowing what to ask.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div id="values">
+                <h3 class="title">
+                    Values
+                </h3>
+                <p class="content">
+                    <ul>
+                        <li>
+                            Challenge the status quo
+                        </li>
+                        <li>
+                            Success is the mindful progress towards a goal
+                        </li>
+                        <li>
+                            Lessons can be found everywhere if you take the time to listen
+                        </li>
+                    </ul>
+                    Our core values are:
+
+                    Embrace the shared adventure
+                    Inspire others with your daily pursuit of high standards
+                    Make time for generosity
+                    Be candid with each other
+                </p>
+            </div>
+            <div id="culture">
+                <h3 class="title">
+                    Culture
+                </h3>
+                <p class="content">
+                    As a team, we embrace diversity – of educational backgrounds, economic backgrounds, race, gender, sexual orientation, and many other categories too numerous to name. We are curious people, and lunch conversations often dive deep into some area of “why”, especially in STEM. We relish a great puzzle and think problem solving is a fun pastime.
+
+As a collective, we typically share multiple of the following in common:
+
+Has a strong sense of mission
+Desires autonomy and ownership over a domain
+Comfortable figuring things out without formalism or structure
+Brings a strong generalist skill set within a domain or across domains
+Has independently contracted, worked on a small business, or started a business
+Has extremely wonky hobbies
+Worked at or for a school, or as a program mentor, to elevate educational outcomes
+Delights in unique, weird creative portfolios or project portfolios
+Considered the black sheep or misfit in the family who dances to their own song
+                </p>
+            </div>
+            <div id="team">
+                <h3 class="title">
+                    Our Team
+                </h3>
+                <p class="content">
+                TEXT
+                </p>
+            </div>
+            <div id="onboard">
+                <h3 class="title">
+                    Help Us Make Visions Reality
+                </h3>
+                <p class="content">
+                LINK HERE
+                </p>
+            </div>
+        </div>
+
+        <div id="events">
+            <h2 class="title">
+                Events
+            </h2>
+            <div id="calendar">
+                <iframe src="https://calendar.google.com/calendar/embed?src=caqgb2s4c0a9fua2lkiovb8spo%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="80%" height="600" align="middle" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+        <div id="projects">
+            <h2 class="title">
+                Projects
+            </h2>
+        </div>
+
+        <div id="gallery">
+            <h2 class="title">
+                Gallery
+            </h2>
+        </div>
+
+        <div id="contact">
+            <h2 class="title">
+                Talk To Us
+            </h2>
+            <h3 class="title">
+                Find Us Here
+            </h3>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/mcmastermakers/">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/McMasterMakers/">
+                        Facebook
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type"text/javascript" src="js/macmakers.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </body>
 </html>
