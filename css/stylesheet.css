@@ -1,0 +1,223 @@
+/* Responsiveness */
+/* Large Screens (Laptops + Tablets) */
+@media screen and (min-width: 501px) {
+  table {
+    width: 60vw;
+  }
+  .calendarHeader {
+    width: 60vw;
+  }
+  .carousel-item img {
+    height: 30vw;
+    /*width: 40vw;*/
+  }
+  .carousel-caption {
+    width: 75vw;
+  }
+  .masonry {
+    -webkit-column-count: 3; /* for Chrome, Safari, Opera */
+    -moz-column-count: 3; /* for Firefox */
+    column-count: 3;
+    -webkit-column-width: 30%;
+    -moz-column-width: 30%;
+    column-width: 30%;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+}
+/* Small Screens (Phones) */ 
+@media screen and (max-width: 500px) {
+  table {
+    width: 90vw;
+  }
+  .calendarHeader {
+    width: 90vw;
+  }
+  .carousel-item img {
+    width: 50vw;
+  }
+  .carousel-caption {
+    width: 90vw;
+  }
+  #daysOfWeek {
+    font-size: 12px;
+  }
+  .masonry {
+    -webkit-column-count: 1; /* for Chrome, Safari, Opera */
+    -moz-column-count: 1; /* for Firefox */
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+}
+}
+
+body {
+    font-family: Franklin Gothic, sans-serif;
+}
+.navbar-brand {
+    color: white;
+}
+.container-fluid {
+    background-color: #fdba2f;
+    padding: 25px 50px 25px 50px; 
+    text-align: center;
+    color: #7c1442;
+}
+.container-fluid h6 {
+    color: #363739;
+}
+.container-fluid h5 {
+    color: white;
+}
+
+/* Center Carousel Images */
+.carousel-item img {
+    display: block;
+    margin: auto;
+}
+p {
+    font-size: 12px;
+}
+/* Format Carousel Captions */
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #7c1442;
+    margin: auto;
+    text-align: left;
+    padding-left: 5vw;
+}
+/* Format Footer Images */
+.footerImg {
+    width: 20px;
+}
+
+/* Calendar Styling */
+.calendarHeader {
+    margin: auto;
+    background-color: #7c1442;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    max-height: 86px;
+}
+.calendarHeader > div {
+    vertical-align: middle;
+}
+#daysOfWeek {
+    background-color: #995577;
+    color: white;
+}
+table {
+    display: table;
+    margin: auto;
+    table-layout: fixed;
+}
+th {
+    text-align: center;
+}
+table, th, td {
+    border-style: solid;
+    border-width: 1px;
+}
+tbody > tr {
+    text-align: right;
+    font-size: 12px;
+    height: 50px;
+}
+td {
+    vertical-align: text-top;
+}
+/* Change Colour of Calendar Buttons */
+/*.btn:hover {
+    background-color: #995577;
+    border-color: #995577;
+    color: white;
+} */
+.btn:hover, .btn:active, .eventButton:focus {
+    background-color: white;
+    border-width: 2px;
+    border-color: #fdba2f;
+    color: #fdba2f;
+    /*outline: none;*/
+    outline-color: #fdba2f
+}
+.btn {
+    background-color: #fdba2f;
+    font-size: 12px;
+    color: #363739;
+    outline: none;
+}
+button:hover, button:focus, button: active {
+    outline: none !important;
+}
+.popover {
+    /*background-color: #bb9933;*/
+    background-color: #995577;
+    color: white;
+    font-size: 10px;
+}
+.popover-header {
+    /*background-color: #bb9933;*/
+    background-color: #995577;
+    color: white;
+    font-size: 12px;
+}
+/* Format Cards */
+.card {
+    padding: 10px;
+    color: #fdba2f;
+}
+.card-title {
+    color: grey;
+}
+
+#exec {
+    color: #fdba2f;
+}
+/* Masonry Grid Styling */
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px;
+}
+.masonry img {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+}
+/* Format Cutout Image Text */
+.headerText {
+    margin: 0 auto;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    width: 70%;
+    font-size: 7vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fdba2f;
+    color: black;
+}
+/* Add drop shadow to elements */
+.container-fluid, table, .calendarHeader, .eventContainer, .carousel-caption {
+    box-shadow: 2px 2px 2px 2px grey;
+}
+.emptyCorner {
+    box-shadow: -3px 3px 3px 3px white;
+}
+.card, button {
+    box-shadow: 1px 1px 1px 1px grey;
+}
+.overlay-image img {
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 1px 1px grey;
+}
