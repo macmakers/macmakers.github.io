@@ -8,16 +8,16 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css\stylesheet.css">
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    	<link rel="stylesheet" type="text/css" href="css\stylesheet.css">
   	<!-- Favicon -->
   	<link rel="icon" href="img\favicon.png">
   	<style type="text/css">
-  		.headerImg {
-        background-image: url("img/headers/about.jpg");
-        background-size: cover;
-        position: relative;
-        height: 200px;
+  	.headerImg {
+          background-image: url("img/headers/about.jpg");
+          background-size: cover;
+          position: relative;
+          height: 20vh;
     	}
       .aboutContainer {
         display: block;
@@ -69,10 +69,10 @@
         			<a class="nav-link" href="about.html">About Us</a>
       			</li>
           		<li class="nav-item">
-            		<a class="nav-link" href="team.html">The Team</a>
+            			<a class="nav-link" href="team.html">The Team</a>
           		</li>
           		<li class="nav-item">
-            		<a class="nav-link" href="events.html">Events</a>
+            			<a class="nav-link" href="events.html">Events</a>
           		</li>
       			<li class="nav-item">
         			<a class="nav-link" href="gallery.html">Gallery</a>
@@ -80,8 +80,14 @@
       			<li class="nav-item">
         			<a class="nav-link" href="store.html">Store</a>
       			</li>
-          		<li class="nav-item">
-            		<a class="nav-link" href="login.html">Log In</a>
+          		<li class="nav-item logged-out">
+            			<a class="nav-link" href="login.html">Log In</a>
+          		</li>
+			<li class="nav-item logged-in">
+            			<a class="nav-link" href="profile.html">Profile</a>
+          		</li>
+			<li class="nav-item logged-in">
+            			<a class="nav-link" href="login.html" id="logout">Log Out</a>
           		</li>
     		</ul>
   		</div>		
@@ -113,6 +119,39 @@
       McMaster Makers envisions the McMaster and Hamilton community evolving into a global leader of technical and social innovation. We plan to achieve this through the development of the McMaster Maker Community, the resources and equipment available to community members, and the development of compelling and effective technical programs that impact McMaster and beyond.
     </h6>
   </div>
+ 
+	<!--Firebase Auth-->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyA7N99LKhybTvWSo9jHBumJ2wgMI9qtuko",
+			authDomain: "mcmaster-makers.firebaseapp.com",
+			databaseURL: "https://mcmaster-makers.firebaseio.com",
+			projectId: "mcmaster-makers",
+			// storageBucket: "mcmaster-makers.appspot.com",
+			// messagingSenderId: "436906108137",
+			appId: "1:436906108137:web:d1f4c95e50f534280d3c78",
+			measurementId: "G-NKBQTK1Z9Q"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+
+		// Make auth and firestore references
+		const auth = firebase.auth();
+    const db = firebase.firestore();
+    </script>
+  <script src="js/index.js"></script>
+	
   <div style="height: 75px;"></div>
  	<!--Contact and img-->
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-bottom">
