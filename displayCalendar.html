@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+
+    <link href="fullcalendar-4.4.2/packages/core/main.css" rel="stylesheet" />
+    <link href="fullcalendar-4.4.2/packages/daygrid/main.css" rel="stylesheet" />
+    <link href="calendar_style.css" rel="stylesheet" />
+
+    <!-- <link href='fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/daygrid/main.css' rel='stylesheet' /> -->
+
+    <script src="fullcalendar-4.4.2/packages/core/main.js"></script>
+    <script src="fullcalendar-4.4.2/packages/daygrid/main.js"></script>
+
+    <!-- <script src='fullcalendar/core/main.js'></script>
+    <script src='fullcalendar/daygrid/main.js'></script> -->
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            height: "auto",
+            plugins: [ 'dayGrid' ],
+            views: {
+                dayGrid: {
+                    fixedWeekCount: false,
+                }
+            },
+        });
+
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+
+    <div id='calendar'></div>
+
+  </body>
+</html>
