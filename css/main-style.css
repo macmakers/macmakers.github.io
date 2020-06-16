@@ -741,19 +741,19 @@ section {
 
 
 /*---------------------------------------
-    CONTACT             
+    LOGIN-REGISTER             
 -----------------------------------------*/
 
-#contact .section-title {
+.login-register .section-title {
     padding-bottom: 0;
 }
 
-#contact .text-success,
-#contact .text-danger {
+.login-register .text-success,
+.login-register .text-danger {
     display: none;
 }
 
-#contact .form-control {
+.login-register .form-control {
     background: transparent;
     border: 0;
     border-bottom: 1px solid #dddddd;
@@ -765,16 +765,16 @@ section {
     transition: all ease-in-out 0.4s;
 }
 
-#contact .form-control:hover,
-#contact .form-control:focus {
+.login-register .form-control:hover,
+.login-register .form-control:focus {
     border-bottom-color: #c9c9c9;
 }
 
-#contact input {
+.login-register input {
     height: 55px;
 }
 
-#contact button#cf-submit {
+.login-register button#cf-submit {
     background: #7c1442;
     border-radius: 0;
     border: 0;
@@ -783,7 +783,7 @@ section {
     height: 50px;
 }
 
-#contact button#cf-submit:hover {
+.login-register button#cf-submit:hover {
     background: #292929;
     color: #ffffff;
 }
