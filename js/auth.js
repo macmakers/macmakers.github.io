@@ -19,7 +19,7 @@ registerForm.addEventListener('submit', (e) => {
         }).then(() => {
             // once user gets the credential, they are automatically logged in
             // console.log(cred.user); // gets user information
-            window.location.href="index.html";
+            window.location.href="profile.html";
             registerForm.reset();
         });
     }); 
@@ -36,7 +36,7 @@ loginForm.addEventListener('submit', (e) => {
     const password = loginForm['cf-password'].value;
 
     auth.signInWithEmailAndPassword(email, password).then((cred) => {
-        window.location.href="index.html";
+        window.location.href="profile.html";
         loginForm.reset();
     });
 });
