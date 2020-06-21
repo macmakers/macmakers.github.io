@@ -113,3 +113,9 @@ h2 {
 /* .fc-unthemed tr {
     border-radius: 20px 20px 0px 0px;
 } */
+
+
+/* Events */
+.fc-event{
+    cursor: pointer;
+}

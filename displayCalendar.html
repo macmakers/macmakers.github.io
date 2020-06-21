@@ -16,6 +16,8 @@
     <!-- <script src='fullcalendar/core/main.js'></script>
     <script src='fullcalendar/daygrid/main.js'></script> -->
 
+    <script src='fullcalendar-4.4.2/packages/google-calendar/main.js'></script>
+
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -23,12 +25,20 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             height: "auto",
-            plugins: [ 'dayGrid' ],
+            plugins: [ 'dayGrid', 'googleCalendar' ],
             views: {
                 dayGrid: {
                     fixedWeekCount: false,
                 }
             },
+            googleCalendarApiKey: 'AIzaSyA7N99LKhybTvWSo9jHBumJ2wgMI9qtuko',
+            events: {
+                googleCalendarId: 'q2bhte988uh5rbhpbjfvelr320@group.calendar.google.com',
+                className: 'gcal-event'
+            },
+            eventClick: function(info) {
+                alert('Event: ' + info.event.title);
+            }
         });
 
         calendar.render();
