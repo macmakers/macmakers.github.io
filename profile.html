@@ -75,6 +75,19 @@
             </div>
 
             <div class="account-details"></div>
+            <div class="col-md-4 col-sm-4">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Change Profile Picture</h2>
+                    </div>
+                </div>
+
+                <form class="upload-picture" id="upload-form">
+                    <input type="file" class="form-control" name="profilePic" accept="image/*" id="profilePic">
+                    <button type="submit" class="form-control" id="cf-submit">Submit</button>
+                </form>
+            </div>
+            
             <!-- <div class="row">
     
                 <div class="col-md-12 col-sm-12">
@@ -141,7 +154,8 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
 
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 		https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -154,22 +168,23 @@
 			authDomain: "mcmaster-makers.firebaseapp.com",
 			databaseURL: "https://mcmaster-makers.firebaseio.com",
 			projectId: "mcmaster-makers",
-			// storageBucket: "mcmaster-makers.appspot.com",
-			// messagingSenderId: "436906108137",
+			storageBucket: "mcmaster-makers.appspot.com",
+			messagingSenderId: "436906108137",
 			appId: "1:436906108137:web:d1f4c95e50f534280d3c78",
 			measurementId: "G-NKBQTK1Z9Q"
 		};
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
-		firebase.analytics();
+        firebase.analytics();
 
 		// Make auth and firestore references
 		const auth = firebase.auth();
-		const db = firebase.firestore();
+        const db = firebase.firestore();
 	</script>
-    <script src="js/auth.js"></script>
     <script src="js/index.js"></script>
     <script src="js/profile.js"></script>
+    <script src="js/uploadDP.js"></script>
+    <script src="js/displayDP.js"></script>
     
 </body>
 </html>

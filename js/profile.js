@@ -35,7 +35,7 @@ const setupAccountUI = (user) => {
             const html = `
             <div class="col-md-4 col-sm-4">
                 <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                    <img src="images/default-person.png" class="img-responsive" alt="">
+                    <img class="img-responsive" alt="" id="dp">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
