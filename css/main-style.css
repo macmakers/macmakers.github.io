@@ -201,7 +201,7 @@ section {
 
 
 /*---------------------------------------
-    projects              
+    NAVIGATION              
 -----------------------------------------*/
 
 .custom-navbar {
@@ -212,6 +212,12 @@ section {
 
 .custom-navbar .navbar-brand {
     color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.custom-navbar-dark .navbar-brand {
+    color: #454545;
     font-size: 18px;
     font-weight: bold;
 }
@@ -785,6 +791,55 @@ section {
 }
 
 .upload-picture button#cf-submit:hover {
+    background: #292929;
+    color: #ffffff;
+}
+
+
+/*---------------------------------------
+    LOGIN REGISTER          
+-----------------------------------------*/
+
+.login-register .section-title {
+    padding-bottom: 0;
+}
+
+.login-register .text-success,
+.login-register .text-danger {
+    display: none;
+}
+
+.login-register .form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    transition: all ease-in-out 0.4s;
+}
+
+.login-register .form-control:hover,
+.login-register .form-control:focus {
+    border-bottom-color: #c9c9c9;
+}
+
+.login-register input {
+    height: 55px;
+}
+
+.login-register button#cf-submit {
+    background: #7c1442;
+    border-radius: 0;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    height: 50px;
+}
+
+.login-register button#cf-submit:hover {
     background: #292929;
     color: #ffffff;
 }
