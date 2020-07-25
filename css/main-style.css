@@ -745,16 +745,16 @@ section {
     UPLOAD PROFILE PICTURE           
 -----------------------------------------*/
 
-.upload-picture .section-title {
+.cf-form .section-title {
     padding-bottom: 0;
 }
 
-.upload-picture .text-success,
-.upload-picture .text-danger {
+.cf-form .text-success,
+.cf-form .text-danger {
     display: none;
 }
 
-.upload-picture .form-control {
+.cf-form .form-control {
     background: transparent;
     border: 0;
     border-bottom: 1px solid #dddddd;
@@ -766,16 +766,16 @@ section {
     transition: all ease-in-out 0.4s;
 }
 
-.upload-picture .form-control:hover,
-.upload-picture .form-control:focus {
+.cf-form .form-control:hover,
+.cf-form .form-control:focus {
     border-bottom-color: #c9c9c9;
 }
 
-.upload-picture input {
+.cf-form input {
     height: 55px;
 }
 
-.upload-picture button#cf-submit {
+.cf-form button#cf-submit {
     background: #7c1442;
     border-radius: 0;
     border: 0;
@@ -784,7 +784,7 @@ section {
     height: 50px;
 }
 
-.upload-picture button#cf-submit:hover {
+.cf-form button#cf-submit:hover {
     background: #292929;
     color: #ffffff;
 }
