@@ -153,7 +153,7 @@ td {
     color: #363739;
     outline: none;
 }
-button:hover, button:focus, button: active {
+button:hover, button:focus, button:active {
     outline: none !important;
 }
 .popover {

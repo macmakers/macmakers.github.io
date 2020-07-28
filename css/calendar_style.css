@@ -1,0 +1,121 @@
+body {
+    font-family: Franklin Gothic, sans-serif;
+}
+
+.fc-button {
+    text-transform: capitalize;
+}
+
+#calendar:not(button) {
+    text-transform: uppercase;
+}
+
+#calendar {
+    box-shadow: none;
+}
+
+/* Month + Year */
+h2 {
+    color: #7c1442;
+}
+
+.fc-toolbar h2 {
+    font-size: 2.5em;
+}
+
+/* .fc-toolbar {
+    background-color: green;
+} */
+
+/* div:not(tr):not(.fc-button):not(.fc-button-primary) {
+    background-color: pink;
+} */
+
+/* tr {
+    background-color: purple;
+} */
+
+/* tr {
+    background-color: white;
+} */
+
+/* div:not(tbody):not(button) {
+    background-color: orange;
+} */
+
+/* Buttons */
+.fc-button {
+    background-color: #fdba2f;
+    border-color: #fdba2f;
+    color: #7c1442;
+}
+
+.fc-button:hover, .fc-button:focus, .fc-button:active {
+    background-color: white;
+    border-color: #fdba2f;
+    color: #fdba2f;
+}
+
+.fc-button:disabled {
+    background-color: #fdba2f;
+    border-color: #fdba2f;
+    color: #7c1442;
+    opacity: 0.65;
+}
+
+/* "primary" coloring */
+.fc-button-primary {
+    background-color: #fdba2f;
+    border-color: #fdba2f;
+    color: #7c1442;
+}
+  
+.fc-button-primary:hover {
+    background-color: white;
+    border-color: #fdba2f;
+    color: #fdba2f;
+}
+  
+.fc-button-primary:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+  
+.fc-button-primary:disabled {
+    background-color: #fdba2f;
+    border-color: #fdba2f;
+    color: #7c1442;
+    opacity: 0.65;
+}
+  
+.fc-button-primary:not(:disabled):active,
+.fc-button-primary:not(:disabled).fc-button-active {
+    background-color: white;
+    border-color: #fdba2f;
+    color: #fdba2f;
+}
+  
+.fc-button-primary:not(:disabled):active:focus,
+.fc-button-primary:not(:disabled).fc-button-active:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(124,20,66, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(124,20,66, 0.5);
+}
+
+/* Header */
+.fc-unthemed th {
+    height: 50px;
+    line-height: 50px;
+    background-color: #7c1442;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* .fc-unthemed tr {
+    border-radius: 20px 20px 0px 0px;
+} */
+
+
+/* Events */
+.fc-event{
+    cursor: pointer;
+}

@@ -1,204 +1,453 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>McMaster Makers</title>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css\stylesheet.css">
-  	<!-- Favicon -->
-  	<link rel="icon" href="img\favicon.png">
-    <style type="text/css">
-      a, a:hover {
-        color: inherit;
-        text-decoration: none;
-      }
-      .date {
-        height: 10vw;
-        width: 10vw;
-        background-color: #7c1442;
-        position: relative;
-        text-align: center;
-        padding-top: 1vw;
-        color: #fdba2f;
-        border-style: none;
-      }
-      .foldedCorner {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0vw 3vw 3vw 0vw;
-        border-color: transparent #995577 transparent transparent;
-        position: absolute;
-        bottom: 0;
-        z-index: 1
-      }
-      .emptyCorner {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 3vw 0vw 0vw 3vw;
-        border-color: transparent transparent transparent white;
-        position: absolute;
-        bottom: 0;
-      }
-      .lines {
-        margin-top: 30px;
-        height: calc(100% - 30px);
-        width: 100%;
-        height: 100%;
-        background-image: repeating-linear-gradient(#363739 0px, #363739 23px, grey 25px);
-        /*border-radius: 10px;*/ 
-        padding-left: 11vw;
-      }
-      .eventContainer {
-        margin: 0;
-        padding: 0;
-        width: 50vw; 
-        height: 10vw; 
-        color: white;
-      }
-      .ml-auto .nav-item {
-        display: none;
-      }
-      .calendarNav {
-        margin-bottom: 2vh;
-      }
-    </style>
+
+    <title>McMaster Makers</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main-style.css">
+
+    <link rel="icon" href="images/logo.png">
+
 </head>
 <body>
-	<script>
-        $(document).ready(function(){
-          $('[data-toggle="popover"]').popover(); 
-        });
-	</script>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  		<a class="navbar-brand" href="index.html" style="color: white">
-    		<img src="img\logo.png" alt="McMaster Makers" height="40px">McMaster Makers
-  		</a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbarHeader">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="collapsibleNavbarHeader" align="right">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="team.html">The Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="events.html">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="store.html">Store</a>
-          </li>
-          <li class="nav-item logged-out">
-            <a class="nav-link" href="login.html">Log In</a>
-          </li>
-          <li class="nav-item logged-in">
-            <a class="nav-link" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item logged-in">
-            <a class="nav-link" href="login.html" id="logout">Log Out</a>
-          </li>
-        </ul>
-      </div>  	
-	</nav>
-  	<!-- News -->
-	<div id="newsCarousel" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-  		<ul class="carousel-indicators">
-    		<li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
-    		<li data-target="#newsCarousel" data-slide-to="1"></li>
-    		<li data-target="#newsCarousel" data-slide-to="2"></li>
-  		</ul>
-		<!-- Slideshow -->
-  		<div class="carousel-inner">
-    		<div class="carousel-item active">
-      			<img src="img/team/team_pic.jpg" alt="team_pic.jpg">
-      			<div class="carousel-caption">
-    				<h6>The Team</h6>
-    				<p>Description</p>
-  				</div>
-    		</div>
-    		<div class="carousel-item">
-      			<img src="img/news2.jpg" alt="news2.jpg">
-      			<div class="carousel-caption">
-    				<h6>Apply!</h6>
-    				<p>Check back for updates on when we're expanding our team.</p>
-  				</div>
-    		</div>
-    		<div class="carousel-item">
-      			<img src="img/news3.jpg" alt="news3.jpg">
-      			<div class="carousel-caption">
-    				<h6>Sign up!</h6>
-    				<p>Our first workshop is coming up - we'll be building Bluetooth-controlled cars! Make sure to sign up soon!</p>
-  			</div>
-    		</div>
-  		</div>
-		<!-- Left and Right Controls -->
-  		<a class="carousel-control-prev" href="#newsCarousel" data-slide="prev">
-    		<span class="carousel-control-prev-icon"></span>
-  		</a>
-  		<a class="carousel-control-next" href="#newsCarousel" data-slide="next">
-    		<span class="carousel-control-next-icon"></span>
-  		</a>
-	</div>
-  <br>
-  <!-- About Us -->
-  <div class="container-fluid">
-    <p style="font-size: 16px;">
-    McMaster Makers is a club looking at hands-on implementation of technology. We create a platform where people can meet, learn new skills, and develop projects. Our dedicated group of project developers create projects and turn them into an educational curriculum so we can teach others. Click <a href="about.html">here</a> to learn more about our mission and our team.<br>Workshops are open to all of the McMaster student body. Check out our upcoming events below.
-    </p>
-  </div>
-  <br>
-  <!--Events -->
-  <!-- Calendar -->
-  <div class="calendarHeader">
-    <h2 style="text-align: center;" id="todaysMonthYear"></h2>
-    <div class="col" align="center">
-      <button type="button" class="btn" onclick="prev()" style="margin-bottom: 2vh;">
-        <i class="fas fa-angle-left"></i>
-      </button>
-      <button type="button" class="btn" onclick="goToToday()" style="margin-bottom: 2vh;">Today</button>
-      <button type="button" class="btn" onclick="next()" style="margin-bottom: 2vh;">
-        <i class="fas fa-angle-right"></i>
-      </button>
-    </div>
-  </div>
-  <table>
-    <thead>
-      <tr id="daysOfWeek">
-        <th>Sun</th>
-        <th>Mon</th>
-        <th>Tues</th>
-        <th>Wed</th>
-        <th>Thurs</th>
-        <th>Fri</th>
-        <th>Sat</th>
-      </tr>
-    </thead>
-    <tbody id="calendarBody"></tbody>
-  </table>
-  <script>
-    $(document).ready(function(){
-      $('[data-toggle="popover"]').popover(); 
-    });
-  </script>
-  <script src="js/buildCalendar.js"></script>
-	
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- LOGO -->
+                <a href="index.html" class="navbar-brand"><img src="images/logo2.png"></a>
+            </div>
+
+            <!-- NAVIGATION LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first navbar-right">
+                    <li class="permanent"><a href="#home" class="smoothScroll">Home</a></li>
+                    <li class="permanent"><a href="#about" class="smoothScroll">About</a></li>
+                    <li class="permanent"><a href="#events" class="smoothScroll">Events</a></li>
+                    <li class="permanent"><a href="#team" class="smoothScroll">Team</a></li>
+                    <li class="logged-out"><a href="login.html" class="smoothScroll">Log In</a></li>
+                    <li class="logged-in"><a href="profile.html" class="smoothScroll">Profile</a></li>
+                    <li class="logged-in"><a href="login.html" class="smoothScroll" id="logout">Log Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- HOME -->
+    <section id="home" class="banner">
+        <div class="">
+            <div class="item item-first">
+                <div class="caption">
+                    <div class="container">
+                        <div class="col-md-8 col-sm-12">
+                            <h1>McMaster Makers</h1>
+                            <a href="#about" class="section-btn btn btn-default smoothScroll">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" data-stellar-background-ratio="0.5">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="about-info">
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>Learn more about us</h4>
+                            <h2>Well-rounded, innovative, and ambitious leaders building tomorrow's world.</h2>
+                        </div>
+
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <p>McMaster Makers works to build and maintain a collaborative, interdisciplinary, and inclusive Maker community through student designed and led hands-on project workshops. The aim of McMaster Makers is to
+                                empower individuals in the McMaster Community through practical STEAM (Science, Technology, Engineering, Art, Mathematics) education. This allows our community to develop the skills and leverage the cooperative
+                                forces necessary to turn their vision into reality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <section id="home" class="slider" data-stellar-background-ratio="0.5">
+                        <div class="row">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item item-first">
+                                    <div class="caption">
+                                        <div class="container">
+                                            <div class="">
+                                                <h1>Working alongside the <br>McMaster community</h1>
+                                                <a href="#events" class="section-btn btn btn-default smoothScroll">View More Events</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="item item-second">
+                                    <div class="caption">
+                                        <div class="container">
+                                            <div class="">
+                                                <h1>Hands-on projects to <br>further your skills</h1>
+                                                <a href="#projects" class="section-btn btn btn-default smoothScroll">Discover Projects</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="item item-third">
+                                    <div class="caption">
+                                        <div class="container">
+                                            <div class="">
+                                                <h1>Dedicated leaders in <br>innovation</h1>
+                                                <a href="#team" class="section-btn btn btn-default smoothScroll">Meet the Team</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </section>
+                </div>        
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CALENDAR -->
+    <section id="events" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Events</h2>
+                        <h4>Check out our calendar for upcoming workshops and events</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-1"></div>
+                <iframe src="displayCalendar.html" id="calendar" class="col-md-10 col-sm-24"></iframe>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+     
+
+
+    <!-- PROJECT GALLERY -->
+    <section id="projects" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Project Gallery</h2>
+                        <h4>Check out our various projects and events over the years</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <!-- PROJECTS THUMB -->
+                        <div class="projects-thumb">
+                            <a href="images/alectra.jpg" class="image-popup" title="Alectra">
+                                <img src="images/alectra.jpg" class="img-responsive" alt="">
+
+                                <div class="projects-info">
+                                    <div class="projects-item">
+                                        <h3>Alectra</h3>
+                                        <p>Description</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <!-- PROJECTS THUMB -->
+                        <div class="projects-thumb">
+                            <a href="images/energy_week.jpg" class="image-popup" title="Energy Week">
+                                <img src="images/energy_week.jpg" class="img-responsive" alt="">
+
+                                <div class="projects-info">
+                                    <div class="projects-item">
+                                        <h3>Energy Week</h3>
+                                        <p>Description</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <!-- PROJECTS THUMB -->
+                        <div class="projects-thumb">
+                            <a href="images/lightbox2.jpg" class="image-popup" title="Lightbox">
+                                <img src="images/lightbox2.jpg" class="img-responsive" alt="">
+
+                                <div class="projects-info">
+                                    <div class="projects-item">
+                                        <h3>Lightbox</h3>
+                                        <p>Description</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <!-- PROJECTS THUMB -->
+                    <div class="projects-thumb">
+                        <a href="images/alectra.jpg" class="image-popup" title="Alectra">
+                            <img src="images/alectra.jpg" class="img-responsive" alt="">
+
+                            <div class="projects-info">
+                                <div class="projects-item">
+                                    <h3>Alectra</h3>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- PROJECTS THUMB -->
+                    <div class="projects-thumb">
+                        <a href="images/energy_week.jpg" class="image-popup" title="Energy Week">
+                            <img src="images/energy_week.jpg" class="img-responsive" alt="">
+
+                            <div class="projects-info">
+                                <div class="projects-item">
+                                    <h3>Energy Week</h3>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- PROJECTS THUMB -->
+                    <div class="projects-thumb">
+                        <a href="images/lightbox2.jpg" class="image-popup" title="Lightbox">
+                            <img src="images/lightbox2.jpg" class="img-responsive" alt="">
+
+                            <div class="projects-info">
+                                <div class="projects-item">
+                                    <h3>Lightbox</h3>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TEAM -->
+    <section id="team" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Meet our team</h2>
+                        <h4>They work hard to deliver quality workshops</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="images/default-person.png" class="img-responsive" alt="">
+                        
+                        <div class="team-hover">
+                            <div class="team-item">
+                                <h4>Short Bio</h4> 
+                                <ul class="social-icon">
+                                    <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                    <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-info">
+                        <h3>Name</h3>
+                        <p>Title</p>
+                        <p>Program</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                        <img src="images/default-person.png" class="img-responsive" alt="">
+                                 
+                        <div class="team-hover">
+                            <div class="team-item">
+                                <h4>Short Bio</h4>
+                                <ul class="social-icon">
+                                    <li><a href="#" class="fa fa-instagram"></a></li>
+                                    <li><a href="#" class="fa fa-flickr"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                       
+                    <div class="team-info">
+                        <h3>Name</h3>
+                        <p>Title</p>
+                        <p>Program</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="images/default-person.png" class="img-responsive" alt="">
+                                 
+                        <div class="team-hover">
+                            <div class="team-item">
+                                <h4>Short Bio</h4>
+                                <ul class="social-icon">
+                                    <li><a href="#" class="fa fa-github"></a></li>
+                                    <li><a href="#" class="fa fa-google"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-info">
+                        <h3>Name</h3>
+                        <p>Title</p>
+                        <p>Program</p>
+                    </div>
+                </div>
+                  
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="col-md-6 col-sm-12">
+                <img src="images/cover_photo.png" style="width: 100%;">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Contact us!</h2>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <form class="wow fadeInUp cf-form" id="contact-form" role="form" action="submit_form.php" method="POST" enctype="text/plain" data-wow-delay="0.8s">
+
+                    <div class="col-md-6 col-sm-6">
+                        <input type="text" class="form-control" id="cf-name" name="name" placeholder="Name">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <input type="email" class="form-control" id="cf-email" name="email" placeholder="Email address">
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <textarea class="form-control" id="cf-message" name="message" rows="8" placeholder="Message"></textarea>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <button type="submit" class="form-control" id="cf-submit" name="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="footer" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-2 col-sm-4">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s">Get in touch!</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10 col-sm-20">
+                    <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+                        <li><a href="https://www.facebook.com/McMasterMakers/" class="fa fa-facebook-square" attr="facebook icon" target="_blank"></a></li>
+                        <li><a href="https://www.linkedin.com/company/mcmastermakers/" class="fa fa-linkedin" target="_blank"></a></li>
+                        <li><a href="https://www.instagram.com/mcmastermakers/" class="fa fa-instagram" target="_blank"></a></li>
+                        <li><a href="mailto:mcmastermakers@gmail.com" class="fa fa-envelope" target="_blank"></a></li>
+                    </ul>
+                </div>
+                    
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-storage.js"></script>
 
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 		https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -211,8 +460,8 @@
 			authDomain: "mcmaster-makers.firebaseapp.com",
 			databaseURL: "https://mcmaster-makers.firebaseio.com",
 			projectId: "mcmaster-makers",
-			// storageBucket: "mcmaster-makers.appspot.com",
-			// messagingSenderId: "436906108137",
+			storageBucket: "mcmaster-makers.appspot.com",
+			messagingSenderId: "436906108137",
 			appId: "1:436906108137:web:d1f4c95e50f534280d3c78",
 			measurementId: "G-NKBQTK1Z9Q"
 		};
@@ -222,32 +471,10 @@
 
 		// Make auth and firestore references
 		const auth = firebase.auth();
-    const db = firebase.firestore();
-  </script>
-  <script src="js/index.js"></script>
-	
-  <div style="height: 75px;"></div>
- 	<!--Contact and img-->
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-bottom">
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbarFooter" style="align-content: right">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="collapsibleNavbarFooter">
-    		<ul class="navbar-nav">
-    		  <li class="nav-item" style="margin: auto; color: grey;">
-    			 Contact us:
-    		  </li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="https://www.facebook.com/McMasterMakers/" target="_blank"><img class="footerImg" src="img\facebook.png" alt="facebook"> McMaster Makers Club</a>
-      		</li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="https://www.instagram.com/mcmastermakers/" target="_blank"><img class="footerImg" src="img\instagram.png" alt="facebook"> mcmastermakers</a>
-      		</li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="mailto:mcmastermakers@gmail.com" target="_blank"><img class="footerImg" src="img\gmail.png" alt="gmail"> mcmastermakers@gmail.com</a>
-      		</li>    
-    		</ul>
-  		</div>	
-	</nav>
+		const db = firebase.firestore();
+	</script>
+    <!-- <script src="js/auth.js"></script> -->
+    <script src="js/index.js"></script>
+
 </body>
 </html>
