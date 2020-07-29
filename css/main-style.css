@@ -69,8 +69,8 @@ a:hover, a:active, a:focus {
 }
 
 ::-webkit-scrollbar{
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -314,7 +314,7 @@ section {
     }
 
     .custom-navbar.top-nav-collapse {
-    background: #ffffff;
+    background: #363739;
     -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -322,11 +322,11 @@ section {
     }
 
     .top-nav-collapse .navbar-brand {
-    color: #454545;
+    color: #ffffff;
     }
 
     .top-nav-collapse .nav li a {
-    color: #575757;
+    color: #ffffff;
     }
 
     .top-nav-collapse .nav .section-btn a {
@@ -348,7 +348,9 @@ section {
     color: #ffffff;
     padding-bottom: 30px;
 }
-
+#home span {
+    color: #7c1442;
+}
 #home h3 {
     color: #f9f9f9;
     font-size: 14px;
@@ -404,6 +406,7 @@ section {
 }
 
 .slider .caption {
+    font-size: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -412,7 +415,7 @@ section {
     height: 100%;
     color: #fff;
     cursor: e-resize;
-    padding: 4em 0 0 2em;
+    padding: 4em 0 0 0em;
 }
 
 .banner .item {
@@ -422,7 +425,13 @@ section {
     background-size: cover;
     height: 500px;
 }
-
+#about .rect{
+    width: 589px;
+    height: 400px;
+    position: absolute;
+    background: #7c1442;
+    top: 20px;
+}
 .slider .item {
     background-position: inherit;
     background-repeat: no-repeat;
@@ -432,7 +441,7 @@ section {
 }
 
 .banner .item-first {
-    background-image: url(../images/headline.jpg);
+    background-image: url(../images/headline2.jpg);
 }
 
 .slider .item-first {
@@ -447,12 +456,32 @@ section {
     background-image: url(../images/index1.jpg);
 }
 
-.slider .item-second .section-btn {
-    background: #292929;
+#about a{
+    font-size: 12px;
 }
 
-.slider .item-second .section-btn:hover {
-    background: #ffffff;
+.slider .item-first .section-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+
+.slider .item-first .section-btn:hover,
+.slider .item-first .section-btn:focus {
+    background: #7c1442;
+    border-color: transparent;
+    color: #ffffff;
+}
+
+.slider .item-second .section-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+
+.slider .item-second .section-btn:hover,
+.slider .item-second .section-btn:focus {
+    background: #7c1442;
+    border-color: transparent;
+    color: #ffffff;
 }
 
 .slider .item-third .section-btn {
@@ -474,21 +503,28 @@ section {
 -----------------------------------------*/
 
 #about {
-    padding-bottom: 0;
+    padding-bottom: 20;
+}
+
+#about h4{
+    font-size: 12px;
 }
 
 .about-info {
-    padding: 0 6em 5em 0;
+    padding: 0 2em 5em 0;
+    font-size: 20px;
 }
 
 .about-info .section-title {
     padding-bottom: 20px;
 }
+#about p{
+    font-size: 15px;
+}
 
 .about-image {
     position: absolute;
 }
-
 
 
 /*---------------------------------------
@@ -499,6 +535,17 @@ section {
     background: #f9f9f9;
 }
 
+#team h2{
+    font-size: 40px;
+}
+
+#team h4{
+    font-size: 14px;
+}
+
+.team .team-pic{
+    background-image: url(../images/index1.jpg)
+}
 .team-thumb {
     position: relative;
     overflow: hidden;
@@ -593,6 +640,14 @@ section {
 
 #projects {
     padding-bottom: 0;
+}
+
+#projects h2{
+    font-size: 40px;
+}
+
+#projects h4{
+    font-size: 14px;
 }
 
 #projects .container {
@@ -946,6 +1001,9 @@ footer .social-icon {
     }
 
     .slider .item {
+        background-position: center;
+    }
+    .rect{
         background-position: center;
     }
 
